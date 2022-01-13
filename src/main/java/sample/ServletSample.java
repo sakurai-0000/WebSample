@@ -2,6 +2,7 @@ package sample;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,12 +38,16 @@ public class ServletSample extends HttpServlet {
 
         out.println("<html>");
         out.println("<head>");
-        out.println("<title>サーブレットのサンプル</title>");
+        out.println("<title>データベーステスト</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<h1>サーブレットのサンプル</h1>");
-        out.println("</body>");
-        out.println("</html>");
+
+        out.println("<p>");
+
+        Connection conn = null;
+        String url = "jdbc:mysql://localhost:3306/test_db?enabledTLSProtocols=TLSv1.2\"";
+        String user = "root";
+        String password = "password";
 	}
 
 	/**
